@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="@color/colorPlayerBackground">
+
+    <ImageView
+        android:id="@+id/song_thumbnail"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="20dp"
+        android:background="@color/colorBackgroundImage"
+        android:padding="3dp"
+        android:src="@drawable/icon_audio" />
+
+    <RelativeLayout
+        android:id="@+id/id_layout_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/song_thumbnail"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/lbl_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="0:00"
+            android:textColor="@color/colorBackgroundImage" />
+
+        <TextView
+            android:id="@+id/lbl_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0:00"
+            android:textColor="@color/colorBackgroundImage" />
+
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/id_seekBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_layout_time" />
+
+    <TextView
+        android:id="@+id/id_song_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_seekBar"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="Set Fire TO The Rain"
+        android:textColor="@color/colorBackgroundImage"
+        android:textSize="25dp" />
+    <TextView
+        android:id="@+id/id_song_number"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_song_name"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="#727272"
+        android:textSize="15dp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/id_backward"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp"
+            android:src="@mipmap/ic_back"
+            />
+
+        <ImageView
+            android:id="@+id/id_play"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp"
+            android:src="@mipmap/ic_pause"
+            />
+
+        <ImageView
+            android:id="@+id/id_forward"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp"
+            android:src="@mipmap/ic_forward"
+            />
+
+        <ImageView
+            android:id="@+id/id_stop"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="2dp"
+            android:src="@mipmap/ic_stop"
+           />
+
+        <ImageView
+            android:id="@+id/id_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/song_thumbnail"
+            android:layout_marginLeft="39dp"
+            android:layout_marginStart="39dp"
+            android:layout_toEndOf="@+id/song_thumbnail"
+            android:layout_toRightOf="@+id/song_thumbnail"
+            android:src="@mipmap/ic_list" />
+
+    </LinearLayout>
+
+</RelativeLayout>
